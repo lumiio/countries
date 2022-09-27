@@ -2,9 +2,8 @@ import { gql, useQuery } from "@apollo/client";
 
 import { COUNTRY } from "../controllers/fragments";
 import FilterRequest from "../models/filterRequest";
-import SortModule, { SortOption, SortOrder } from "../models/sortModule";
+import SortModule, { SortOrder } from "../models/sortModule";
 import "./styles/countryList.css";
-// import { useEffect, useState } from 'react';
 
 interface props {
   filter: FilterRequest;
