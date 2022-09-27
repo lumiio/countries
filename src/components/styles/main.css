@@ -1,0 +1,9 @@
+.form-control {
+    margin: 10px;
+    display: inline-flex;
+}
+
+.form-container {
+    width: max-content;
+    line-height: 76px;
+}

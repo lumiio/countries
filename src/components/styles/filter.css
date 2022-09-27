@@ -1,0 +1,13 @@
+.filterFieldSelect {
+    width: 200px;
+}
+
+.filterOperatorSelect{
+    width: 150px;
+}
+
+#valueInput{
+    width: 200px;
+    display: inline-flex
+}
+

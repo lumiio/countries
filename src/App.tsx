@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CountryList from "./components/countryList";
+import Filter from "./components/filter";
+import { useState } from "react";
+import FilterRequest from "./models/filterRequest";
+import Sort from "./components/sort";
+import SortModule from "./models/sortModule";
 
 function App() {
+  const [filter, setFilter] = useState<FilterRequest>(new FilterRequest());
+  const [sortModule, setSortModule] = useState<SortModule>(new SortModule());
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='filter-sort'>
+        <Filter filter={filter} selectFilterHandler={setFilter} />
+        <Sort sortModule={sortModule} setSortHandler={setSortModule} />
+      </div>
+      <CountryList filter={filter} sortModule={sortModule} />
     </div>
   );
 }

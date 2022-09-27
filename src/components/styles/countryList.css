@@ -1,0 +1,12 @@
+.country-list{
+    float: left;
+    margin-left: 700px;
+}
+
+.highlight {
+    background-color: blanchedalmond;
+}
+
+.country-block{
+    padding: 15px;
+}
